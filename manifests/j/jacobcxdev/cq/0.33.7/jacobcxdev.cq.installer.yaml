@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
+PackageIdentifier: jacobcxdev.cq
+PackageVersion: 0.33.7
+InstallerLocale: en-US
+InstallerType: wix
+Scope: user
+InstallModes:
+  - interactive
+  - silent
+  - silentWithProgress
+UpgradeBehavior: install
+Commands:
+  - cq
+Installers:
+  - Architecture: x64
+    InstallerUrl: https://github.com/jacobcxdev/cq/releases/download/v0.33.7/cq_0.33.7_windows_amd64.msi
+    InstallerSha256: 80b4399bcdc6946485a1248d87a621498e4f0cfa103fa2e83d6318b702487108
+    AppsAndFeaturesEntries:
+      - DisplayName: CQ
+        Publisher: jacobcxdev
+        DisplayVersion: 0.33.7
+        UpgradeCode: '{7B64C2EF-DF57-4C43-8C35-7D1949B09469}'
+  - Architecture: arm64
+    InstallerUrl: https://github.com/jacobcxdev/cq/releases/download/v0.33.7/cq_0.33.7_windows_arm64.msi
+    InstallerSha256: 58739ed45e4a56e3b55f594e01b7ed8e55be6f5c54c1c773adcfafd08ac0c28b
+    AppsAndFeaturesEntries:
+      - DisplayName: CQ
+        Publisher: jacobcxdev
+        DisplayVersion: 0.33.7
+        UpgradeCode: '{7B64C2EF-DF57-4C43-8C35-7D1949B09469}'
+ManifestType: installer
+ManifestVersion: 1.10.0
